@@ -4,10 +4,10 @@ const test = require('tape');
 module.exports = test('Testing validateAge', (t) => {
   t.plan(6);
   validateAge(17, (err, res) => {
-    t.equal(res, 17);
+    t.equal(res, 17, '17 validates');
   });
   validateAge(79, (err, res) => {
-    t.equal(res, 79);
+    t.equal(res, 79, '79 validated');
   });
   validateAge(1, (err, res) => {
     t.ok(err, '1 returns error - too young');
