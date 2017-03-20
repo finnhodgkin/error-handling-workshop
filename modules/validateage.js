@@ -7,6 +7,9 @@ const validateAge = (age) => {
   else if ((typeof age !== 'number') && (age % 1 === 0)) {
     return new Error(`${age} is not an integer`);
   }
+  else {
+    return age;
+  }
 }
 
 module.exports = validateAge;
