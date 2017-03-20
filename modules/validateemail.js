@@ -1,10 +1,9 @@
-// @TODO: Build validateEmail
 // String (valid email address)
 const validateEmail = (email, cb) => {
   if (typeof email !== 'string') {
     cb(new Error(`${email}: not a string!`));
   }
-  else if (!email.match(/([a-z]|\.|\_|\-|\d)+@(.*)(\.([a-z]*))+/gi)) {
+  else if (!email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/gi)) {
     cb(new Error(`${email} is not a valid email`));
   }
   else {

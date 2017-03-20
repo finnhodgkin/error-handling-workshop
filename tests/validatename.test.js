@@ -20,5 +20,9 @@ module.exports = test('Testing validateName', (t) => {
   validateName('f', (err, res) => {
     t.ok(err, 'name must contain at least two letters');
   });
+  validateName('f\'', (err, res) => {
+    t.ok(err, 'name must contain at least two letters');
+  });
+
   t.end();
 })
